@@ -22,4 +22,4 @@
 #define RGB_MATRIX_LED_COUNT (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 
 /* Enable caps-lock LED */
-#define CAPS_LOCK_LED_INDEX 32
+// #define CAPS_LOCK_LED_INDEX 32
