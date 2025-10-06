@@ -33,34 +33,32 @@ enum custom_layer {
 		MOD
 };
 
-enum rgb_keycodes {
-		BR_INC, BR_DEC,
+enum rgb_keys {
 		EF_INC, EF_DEC,
 		H1_INC, H1_DEC,
 		S1_INC, S1_DEC,
 		H2_INC, H2_DEC,
-    S2_INC, S2_DEC
-}
-
+		S2_INC, S2_DEC,
+		BR_INC, BR_DEC,
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_75_via(
         KC_ESC,    LALT(1),   LALT(2),   LALT(3),   LALT(4),   LALT(5),   LALT(6),   LALT(7),   LALT(8),   LALT(9),  LALT(0), _______, _______, KC_F13, KC_MUTE,
-        KC_GRV,     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_MINS,  KC_EQL, KC_BSPC, KC_HYPR, ________,
-        KC_TAB,     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_LBRC, KC_RBRC, KC_BSLS, KC_MEH, ________,
-        LCTL_T(KC_ESC),    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,  KC_ENT,          
-        KC_LSFT, 	KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,   KC_UP,         
+        KC_GRV,     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_MINS,  KC_EQL, KC_BSPC, KC_HYPR, 
+        KC_TAB,     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_LBRC, KC_RBRC, KC_BSLS, KC_MEH, 
+        LCTL_T(KC_ESC),    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,  KC_ENT,         KC_VOLD,
+        KC_LSFT, 	KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,   KC_UP,        KC_VOLU, 
         CW_TOGG,  KC_LGUI, KC_LALT,                    KC_SPC,                            MO(PLUS),   MO(META), KC_LEFT, KC_DOWN, KC_RGHT
     ),
         [META] = LAYOUT_75_via(
-        _______, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, TG(MOD),
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______,                   _______,                            _______, _______, _______, _______, _______
     ),
-#endif
     [PLUS] = LAYOUT_75_via(
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, TG(MOD),
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,

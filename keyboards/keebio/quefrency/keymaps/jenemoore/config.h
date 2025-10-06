@@ -22,6 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // #define USE_I2C
 
-#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
-#define ENABLE_RGB_MATRIX_TYPING_HEATMAP
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
+//#define ENCODERS_PAD_A_RIGHT { B12 }
+//#define ENCODERS_PAD_B_RIGHT { B13 }
+//#define ENCODERS_PAD_A { }
+//#define ENCODERS_PAD_B { }
+#define DEBOUNCE 7
